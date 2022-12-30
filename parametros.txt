@@ -1,0 +1,36 @@
+=======================================================================================
+= Este documento foi criado para facilitar a execucao dos testes por linha de comando =
+=======================================================================================
+  _ __   __ _ _ __ __ _ _ __ ___   ___| |_ _ __ ___  ___
+| '_ \ / _` | '__/ _` | '_ ` _ \ / _ \ __| '__/ _ \/ __|
+| |_) | (_| | | | (_| | | | | | |  __/ |_| | | (_) \__ \
+| .__/ \__,_|_|  \__,_|_| |_| |_|\___|\__|_|  \___/|___/
+|_|
+
+Testar tudo sem fazer nenhum comentario
+mvn test verify
+
+Testar por nome do cenario
+mvn test -Dcucumber.options="--name 'Nome do cenario de teste'"
+
+Testar por referencia de cenario, features
+mvn test -Dcucumber.options="src/overlay.feature"
+
+mvn test -Dcucumber.options="--tags @integrado"
+mvn test -Dapp.env=dev -Dcucumber.options="--tags @integrado"
+mvn test -Dapp.env=preprod -Dcucumber.options="--tags @integrado"
+mvn test -Dapp.env=local -Dcucumber.options="--tags @integrado"
+mvn test -Dcucumber.options="--tags @Teste,@Testes"
+=======================
+
+
+
+
+
+
+
+
+
+
+
+
